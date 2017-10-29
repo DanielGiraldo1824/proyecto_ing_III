@@ -1,0 +1,994 @@
+1,Abejorral,null,null,null
+2,Abrego,null,null,null
+3,Abriaqui,null,null,null
+4,Acacias,null,null,null
+5,Acandi,null,null,null
+6,Acevedo,null,null,null
+7,Achi,null,null,null
+8,Agrado,null,null,null
+9,Agua de Dios,null,null,null
+10,Aguachica,null,null,null
+11,Aguada,null,null,null
+12,Aguadas,null,null,null
+13,Aguazul,null,null,null
+14,Agustin Codazzi,null,null,null
+15,Aipe,null,null,null
+16,Alban,null,null,null
+17,Alban (San Jose),null,null,null
+18,Albania,null,null,null
+19,Alcala,null,null,null
+20,Aldana,null,null,null
+21,Alejandria,null,null,null
+22,Algeciras,null,null,null
+23,Almaguer,null,null,null
+24,Almeida,null,null,null
+25,Alpujarra,null,null,null
+26,Altamira,null,null,null
+27,Alto Baudo (Pie de Pato),null,null,null
+28,Altos del Rosario,null,null,null
+29,Alvarado,null,null,null
+30,Amaga,null,null,null
+31,Amalfi,null,null,null
+32,Ambalema,null,null,null
+33,Anapoima,null,null,null
+34,Ancuya,null,null,null
+35,Andalucia,null,null,null
+36,Andes,null,null,null
+37,Angelopolis,null,null,null
+38,Angostura,null,null,null
+39,Anolaima,null,null,null
+40,Anori,null,null,null
+41,Anserma,null,null,null
+42,Ansermanuevo,null,null,null
+43,Antioquia,null,null,null
+44,Anza,null,null,null
+45,Anzoategui,null,null,null
+46,Apartado,null,null,null
+47,Apia,null,null,null
+48,Aquitania,null,null,null
+49,Aracataca,null,null,null
+50,Aranzazu,null,null,null
+51,Aratoca,null,null,null
+52,Arauca,null,null,null
+53,Arauquita,null,null,null
+54,Arbelaez,null,null,null
+55,Arboleda (Berruecos),null,null,null
+56,Arboledas,null,null,null
+57,Arboletes,null,null,null
+58,Arcabuco,null,null,null
+59,Arenal,null,null,null
+60,Argelia,null,null,null
+61,Ariguani (El Dificil),null,null,null
+62,Arjona,null,null,null
+63,Armenia,null,null,null
+64,Armero (Guayabal),null,null,null
+65,Arroyohondo,null,null,null
+66,Astrea,null,null,null
+67,Ataco,null,null,null
+68,Atrato (Yuto),null,null,null
+69,Ayapel,null,null,null
+70,Bagado,null,null,null
+71,Bahia Solano (Mtis),null,null,null
+72,Bajo Baudo (Pizarro),null,null,null
+73,Balboa,null,null,null
+74,Baranoa,null,null,null
+75,Baraya,null,null,null
+76,Barbacoas,null,null,null
+77,Barbosa,null,null,null
+78,Barichara,null,null,null
+79,Barranca de Upia,null,null,null
+80,Barrancabermeja,null,null,null
+81,Barrancas,null,null,null
+82,Barranco de Loba,null,null,null
+83,Barranquilla,null,null,null
+84,Becerril,null,null,null
+85,Belalcazar,null,null,null
+86,Belen,null,null,null
+87,Belen de los Andaquies,null,null,null
+88,Belen de Umbria,null,null,null
+89,Bello,null,null,null
+90,Belmira,null,null,null
+91,Beltran,null,null,null
+92,Berbeo,null,null,null
+93,Betania,null,null,null
+94,Beteitiva,null,null,null
+95,Betulia,null,null,null
+96,Bituima,null,null,null
+97,Boavita,null,null,null
+98,Bochalema,null,null,null
+99,Bojaca,null,null,null
+100,Bojaya (Bellavista),null,null,null
+101,Bolivar,null,null,null
+102,Bosconia,null,null,null
+103,Boyaca,null,null,null
+104,Briseno,null,null,null
+105,Bucaramanga,null,null,null
+106,Bucarasica,null,null,null
+107,Buenaventura,null,null,null
+108,Buenavista,null,null,null
+109,Buenos Aires,null,null,null
+110,Buesaco,null,null,null
+111,Buga,null,null,null
+112,Bugalagrande,null,null,null
+113,Buritica,null,null,null
+114,Busbanza,null,null,null
+115,Cabrera,null,null,null
+116,Cabuyaro,null,null,null
+117,Caceres,null,null,null
+118,Cachipay,null,null,null
+119,Cachira,null,null,null
+120,Cacota,null,null,null
+121,Caicedo,null,null,null
+122,Caicedonia,null,null,null
+123,Caimito,null,null,null
+124,Cajamarca,null,null,null
+125,Cajibio,null,null,null
+126,Cajica,null,null,null
+127,Calamar,null,null,null
+128,Calarca,null,null,null
+129,Caldas,null,null,null
+130,Caldono,null,null,null
+131,Cali,null,null,null
+132,California,null,null,null
+133,Calima (Darien),null,null,null
+134,Caloto,null,null,null
+135,Campamento,null,null,null
+136,Campo de la Cruz,null,null,null
+137,Campoalegre,null,null,null
+138,Campohermoso,null,null,null
+139,Canalete,null,null,null
+140,Candelaria,null,null,null
+141,Cantagallo,null,null,null
+142,Canton de San Pablo,null,null,null
+143,Canasgordas,null,null,null
+144,Caparrapi,null,null,null
+145,Capitanejo,null,null,null
+146,Caqueza,null,null,null
+147,Caracoli,null,null,null
+148,Caramanta,null,null,null
+149,Carcasi,null,null,null
+150,Carepa,null,null,null
+151,Carmen de Apicala,null,null,null
+152,Carmen de Carupa,null,null,null
+153,Carmen de Viboral,null,null,null
+154,Carolina,null,null,null
+155,Cartagena,null,null,null
+156,Cartagena del Chaira,null,null,null
+157,Cartago,null,null,null
+158,Carur,null,null,null
+159,Casabianca,null,null,null
+160,Castilla la Nueva,null,null,null
+161,Caucasia,null,null,null
+162,Cepita,null,null,null
+163,Cerete,null,null,null
+164,Cerinza,null,null,null
+165,Cerrito,null,null,null
+166,Cerro San Antonio,null,null,null
+167,Chachagüi,null,null,null
+168,Chaguani,null,null,null
+169,Chalan,null,null,null
+170,Chameza,null,null,null
+171,Chaparral,null,null,null
+172,Charala,null,null,null
+173,Charta,null,null,null
+174,Chia,null,null,null
+175,Chigorodo,null,null,null
+176,Chima,null,null,null
+177,Chimichagua,null,null,null
+178,Chinacota,null,null,null
+179,Chinavita,null,null,null
+180,Chinchina,null,null,null
+181,Chin,null,null,null
+182,Chipaque,null,null,null
+183,Chipata,null,null,null
+184,Chiquinquira,null,null,null
+185,Chiquiza,null,null,null
+186,Chiriguana,null,null,null
+187,Chiscas,null,null,null
+188,Chita,null,null,null
+189,Chitaga,null,null,null
+190,Chitaranque,null,null,null
+191,Chivata,null,null,null
+192,Chivolo,null,null,null
+193,Chivor,null,null,null
+194,Choachi,null,null,null
+195,Choconta,null,null,null
+196,Cicuto,null,null,null
+197,Cienaga,null,null,null
+198,Cienaga de Oro,null,null,null
+199,Cimitarra,null,null,null
+200,Circasia,null,null,null
+201,Cisneros,null,null,null
+202,Clemencia,null,null,null
+203,Cocorna,null,null,null
+204,Coello,null,null,null
+205,Cogua,null,null,null
+206,Colombia,null,null,null
+207,Colon,null,null,null
+208,Colon (Genova),null,null,null
+209,Coloso (Ricaurte),null,null,null
+210,Combita,null,null,null
+211,Concepcion,null,null,null
+212,Concordia,null,null,null
+213,Condoto,null,null,null
+214,Confines,null,null,null
+215,Consaca,null,null,null
+216,Contadero,null,null,null
+217,Contratacion,null,null,null
+218,Convencion,null,null,null
+219,Copacabana,null,null,null
+220,Coper,null,null,null
+221,Cordoba,null,null,null
+222,Corinto,null,null,null
+223,Coromoro,null,null,null
+224,Corozal,null,null,null
+225,Corrales,null,null,null
+226,Cota,null,null,null
+227,Cotorra,null,null,null
+228,Covarachia,null,null,null
+229,Coyaima,null,null,null
+230,Cravo Norte,null,null,null
+231,Cuaspud (Carlosama),null,null,null
+232,Cubar,null,null,null
+233,Cubarral,null,null,null
+234,Cucaita,null,null,null
+235,Cucunuba,null,null,null
+236,Ccuta,null,null,null
+237,Cucutilla,null,null,null
+238,Cuitiva,null,null,null
+239,Cumaral,null,null,null
+240,Cumaribo,null,null,null
+241,Cumbal,null,null,null
+242,Cumbitara,null,null,null
+243,Cunday,null,null,null
+244,Curillo,null,null,null
+245,Curiti,null,null,null
+246,Curumani,null,null,null
+247,Dabeiba,null,null,null
+248,Dagua,null,null,null
+249,Dibulla,null,null,null
+250,Distraccion,null,null,null
+251,Dolores,null,null,null
+252,Don Matias,null,null,null
+253,Dos Quebradas,null,null,null
+254,Duitama,null,null,null
+255,Durania,null,null,null
+256,Ebejico,null,null,null
+257,El aguila,null,null,null
+258,El Bagre,null,null,null
+259,El Banco,null,null,null
+260,El Cairo,null,null,null
+261,El Calvario,null,null,null
+262,El Carmen,null,null,null
+263,El Carmen de Bolivar,null,null,null
+264,El Castillo,null,null,null
+265,El Cerrito,null,null,null
+266,El Charco,null,null,null
+267,El Cocuy,null,null,null
+268,El Colegio,null,null,null
+269,El Copey,null,null,null
+270,El Doncello,null,null,null
+271,El Dorado,null,null,null
+272,El Dovio,null,null,null
+273,El Espino,null,null,null
+274,El Guacamayo,null,null,null
+275,El Guamo,null,null,null
+276,El Litoral de San Juan,null,null,null
+277,El Molino,null,null,null
+278,El Paso,null,null,null
+279,El Paujil,null,null,null
+280,El Penon,null,null,null
+281,El Pinon,null,null,null
+282,El Playon,null,null,null
+283,El Reten,null,null,null
+284,El Retorno,null,null,null
+285,El Rosal,null,null,null
+286,El Rosario,null,null,null
+287,El Tablon,null,null,null
+288,El Tambo,null,null,null
+289,El Tarra,null,null,null
+290,El Zulia,null,null,null
+291,Elias,null,null,null
+292,Encino,null,null,null
+293,Enciso,null,null,null
+294,Entrerrios,null,null,null
+295,Envigado,null,null,null
+296,Espinal,null,null,null
+297,Facatativa,null,null,null
+298,Falan,null,null,null
+299,Filadelfia,null,null,null
+300,Filandia,null,null,null
+301,Firavitoba,null,null,null
+302,Flandes,null,null,null
+303,Florencia,null,null,null
+304,Floresta,null,null,null
+305,Florian,null,null,null
+306,Florida,null,null,null
+307,Floridablanca,null,null,null
+308,Fomeque,null,null,null
+309,Fonseca,null,null,null
+310,Fortul,null,null,null
+311,Fosca,null,null,null
+312,Francisco Pizarro,null,null,null
+313,Fredonia,null,null,null
+314,Fresno,null,null,null
+315,Frontino,null,null,null
+316,Fuente de Oro,null,null,null
+317,Fundacion,null,null,null
+318,Funes,null,null,null
+319,Funza,null,null,null
+320,Fquene,null,null,null
+321,Fusagasuga,null,null,null
+322,Gachala,null,null,null
+323,Gachancipa,null,null,null
+324,Gachantiva,null,null,null
+325,Gacheta,null,null,null
+326,Galan,null,null,null
+327,Galapa,null,null,null
+328,Galeras (Nueva Granada),null,null,null
+329,Gama,null,null,null
+330,Gamarra,null,null,null
+331,Gambita,null,null,null
+332,Gameza,null,null,null
+333,Garagoa,null,null,null
+334,Garzon,null,null,null
+335,Genova,null,null,null
+336,Gigante,null,null,null
+337,Ginebra,null,null,null
+338,Giraldo,null,null,null
+339,Girardot,null,null,null
+340,Girardota,null,null,null
+341,Giron,null,null,null
+342,Gomez Plata,null,null,null
+343,Gonzalez,null,null,null
+344,Gramalote,null,null,null
+345,Granada,null,null,null
+346,Guaca,null,null,null
+347,Guacamayas,null,null,null
+348,Guacari,null,null,null
+349,Guacheta,null,null,null
+350,Guachucal,null,null,null
+351,Guadalupe,null,null,null
+352,Guaduas,null,null,null
+353,Guaitarilla,null,null,null
+354,Gualmatan,null,null,null
+355,Guamal,null,null,null
+356,Guamo,null,null,null
+357,Guapi,null,null,null
+358,Guapota,null,null,null
+359,Guaranda,null,null,null
+360,Guarne,null,null,null
+361,Guasca,null,null,null
+362,Guatape,null,null,null
+363,Guataqui,null,null,null
+364,Guatavita,null,null,null
+365,Guateque,null,null,null
+366,Guatica,null,null,null
+367,Guavata,null,null,null
+368,Guayabal de Siquima,null,null,null
+369,Guayabetal,null,null,null
+370,Guayata,null,null,null
+371,Guepsa,null,null,null
+372,Guican,null,null,null
+373,Gutierrez,null,null,null
+374,Hacari,null,null,null
+375,Hatillo de Loba,null,null,null
+376,Hato,null,null,null
+377,Hato Corozal,null,null,null
+378,Hatonuevo,null,null,null
+379,Heliconia,null,null,null
+380,Herran,null,null,null
+381,Herveo,null,null,null
+382,Hispania,null,null,null
+383,Hobo,null,null,null
+384,Honda,null,null,null
+385,Ibague,null,null,null
+386,Icononzo,null,null,null
+387,Iles,null,null,null
+388,Imes,null,null,null
+389,Inza,null,null,null
+390,Ipiales,null,null,null
+391,Iquira,null,null,null
+392,Isnos,null,null,null
+393,Itagüi,null,null,null
+394,Itsmina,null,null,null
+395,Ituango,null,null,null
+396,Iza,null,null,null
+397,Jambalo,null,null,null
+398,Jamundi,null,null,null
+399,Jardin,null,null,null
+400,Jenesano,null,null,null
+401,Jerico,null,null,null
+402,Jerusalen,null,null,null
+403,Jess Maria,null,null,null
+404,Jordan,null,null,null
+405,Juan de Acosta,null,null,null
+406,Junin,null,null,null
+407,Jurado,null,null,null
+408,La Apartada (Frontera),null,null,null
+409,La Argentina,null,null,null
+410,La Belleza,null,null,null
+411,La Calera,null,null,null
+412,La Capilla,null,null,null
+413,La Ceja,null,null,null
+414,La Celia,null,null,null
+415,La Cruz,null,null,null
+416,La Cumbre,null,null,null
+417,La Dorada,null,null,null
+418,La Esperanza,null,null,null
+419,La Estrella,null,null,null
+420,La Florida,null,null,null
+421,La Gloria,null,null,null
+422,La Jagua de Ibirico,null,null,null
+423,La Llanada,null,null,null
+424,La Macarena,null,null,null
+425,La Merced,null,null,null
+426,La Mesa,null,null,null
+427,La Montanita,null,null,null
+428,La Palma,null,null,null
+429,La Paz,null,null,null
+430,La Paz (Robles),null,null,null
+431,La Pena,null,null,null
+432,La Pintada,null,null,null
+433,La Plata,null,null,null
+434,La Playa,null,null,null
+435,La Primavera,null,null,null
+436,La Salina,null,null,null
+437,La Sierra,null,null,null
+438,La Tebaida,null,null,null
+439,La Tola,null,null,null
+440,La Ubita,null,null,null
+441,La Union,null,null,null
+442,La Uribe,null,null,null
+443,La Vega,null,null,null
+444,La Victoria,null,null,null
+445,La Virginia,null,null,null
+446,Labateca,null,null,null
+447,Labranzagrande,null,null,null
+448,Landazuri,null,null,null
+449,Lebrija,null,null,null
+450,Leiva,null,null,null
+451,Lejanias,null,null,null
+452,Lenguazaque,null,null,null
+453,Lerida,null,null,null
+454,Leticia,null,null,null
+455,Libano,null,null,null
+456,Liborina,null,null,null
+457,Linares,null,null,null
+458,Lloro,null,null,null
+459,Lopez (Micay),null,null,null
+460,Lorica,null,null,null
+461,Los Andes (Sotomayor),null,null,null
+462,Los Cordobas,null,null,null
+463,Los Palmitos,null,null,null
+464,Los Patios,null,null,null
+465,Los Santos,null,null,null
+466,Lourdes,null,null,null
+467,Luruaco,null,null,null
+468,Macanal,null,null,null
+469,Macaravita,null,null,null
+470,Maceo,null,null,null
+471,Macheta,null,null,null
+472,Madrid,null,null,null
+473,Magangue,null,null,null
+474,Magüi (Payan),null,null,null
+475,Mahates,null,null,null
+476,Maicao,null,null,null
+477,Majagual,null,null,null
+478,Malaga,null,null,null
+479,Malambo,null,null,null
+480,Mallama (Piedrancha),null,null,null
+481,Manati,null,null,null
+482,Manaure,null,null,null
+483,Manaure Balcon Cesar,null,null,null
+484,Mani,null,null,null
+485,Manizales,null,null,null
+486,Manta,null,null,null
+487,Manzanares,null,null,null
+488,Mapiripan,null,null,null
+489,Margarita,null,null,null
+490,Maria la Baja,null,null,null
+491,Marinilla,null,null,null
+492,Maripi,null,null,null
+493,Mariquita,null,null,null
+494,Marmato,null,null,null
+495,Marquetalia,null,null,null
+496,Marsella,null,null,null
+497,Marulanda,null,null,null
+498,Matanza,null,null,null
+499,Medellin,null,null,null
+500,Medina,null,null,null
+501,Melgar,null,null,null
+502,Mercaderes,null,null,null
+503,Mesetas,null,null,null
+504,Milan,null,null,null
+505,Miraflores,null,null,null
+506,Miranda,null,null,null
+507,Mistrato,null,null,null
+508,Mit,null,null,null
+509,Mocoa,null,null,null
+510,Mogotes,null,null,null
+511,Molagavita,null,null,null
+512,Momil,null,null,null
+513,Mompos,null,null,null
+514,Mongua,null,null,null
+515,Mongui,null,null,null
+516,Moniquira,null,null,null
+517,Monitos,null,null,null
+518,Montebello,null,null,null
+519,Montecristo,null,null,null
+520,Montelibano,null,null,null
+521,Montenegro,null,null,null
+522,Monteria,null,null,null
+523,Monterrey,null,null,null
+524,Morales,null,null,null
+525,Morelia,null,null,null
+526,Morroa,null,null,null
+527,Mosquera,null,null,null
+528,Motavita,null,null,null
+529,Murillo,null,null,null
+530,Murindo,null,null,null
+531,Mutata,null,null,null
+532,Mutiscua,null,null,null
+533,Muzo,null,null,null
+534,Narino,null,null,null
+535,Nataga,null,null,null
+536,Natagaima,null,null,null
+537,Nechi,null,null,null
+538,Necocli,null,null,null
+539,Neira,null,null,null
+540,Neiva,null,null,null
+541,Nemocon,null,null,null
+542,Nilo,null,null,null
+543,Nimaima,null,null,null
+544,Nobsa,null,null,null
+545,Nocaima,null,null,null
+546,Novita,null,null,null
+547,Nuevo Colon,null,null,null
+548,Nunchia,null,null,null
+549,Nuqui,null,null,null
+550,Obando,null,null,null
+551,Ocamonte,null,null,null
+552,Ocana,null,null,null
+553,Oiba,null,null,null
+554,Oicata,null,null,null
+555,Olaya,null,null,null
+556,Onzaga,null,null,null
+557,Oporapa,null,null,null
+558,Orito,null,null,null
+559,Orocue,null,null,null
+560,Ortega,null,null,null
+561,Ospina,null,null,null
+562,Otanche,null,null,null
+563,Ovejas,null,null,null
+564,Pachavita,null,null,null
+565,Pacho,null,null,null
+566,Pacora,null,null,null
+567,Padilla,null,null,null
+568,Paez,null,null,null
+569,Paez (Belalcazar),null,null,null
+570,Paicol,null,null,null
+571,Pailitas,null,null,null
+572,Paime,null,null,null
+573,Paipa,null,null,null
+574,Pajarito,null,null,null
+575,Palermo,null,null,null
+576,Palestina,null,null,null
+577,Palmar,null,null,null
+578,Palmar de Varela,null,null,null
+579,Palmas del Socorro,null,null,null
+580,Palmira,null,null,null
+581,Palmito,null,null,null
+582,Palocabildo,null,null,null
+583,Pamplona,null,null,null
+584,Pamplonita,null,null,null
+585,Pandi,null,null,null
+586,Panqueba,null,null,null
+587,Paramo,null,null,null
+588,Paratebueno,null,null,null
+589,Pasca,null,null,null
+590,Pasto,null,null,null
+591,Patia (El Bordo),null,null,null
+592,Pauna,null,null,null
+593,Paya,null,null,null
+594,Paz de Ariporo,null,null,null
+595,Paz de Rio,null,null,null
+596,Pedraza,null,null,null
+597,Pelaya,null,null,null
+598,Pensilvania,null,null,null
+599,Penol,null,null,null
+600,Peque,null,null,null
+601,Pereira,null,null,null
+602,Pesca,null,null,null
+603,Piamonte,null,null,null
+604,Pie de Cuesta,null,null,null
+605,Piedras,null,null,null
+606,Piendamo,null,null,null
+607,Pijao,null,null,null
+608,Pijino del Carmen,null,null,null
+609,Pinchote,null,null,null
+610,Pinillos,null,null,null
+611,Piojo,null,null,null
+612,Pisva,null,null,null
+613,Pital,null,null,null
+614,Pitalito,null,null,null
+615,Pivijay,null,null,null
+616,Planadas,null,null,null
+617,Planeta Rica,null,null,null
+618,Plato,null,null,null
+619,Policarpa,null,null,null
+620,Polonuevo,null,null,null
+621,Ponedera,null,null,null
+622,Popayan,null,null,null
+623,Pore,null,null,null
+624,Potosi,null,null,null
+625,Pradera,null,null,null
+626,Prado,null,null,null
+627,Providencia,null,null,null
+628,Publoviejo,null,null,null
+629,Pueblo Bello,null,null,null
+630,Pueblo Nuevo,null,null,null
+631,Pueblo Rico,null,null,null
+632,Pueblorrico,null,null,null
+633,Puente Nacional,null,null,null
+634,Puerres,null,null,null
+635,Puerto Asis,null,null,null
+636,Puerto Berrio,null,null,null
+637,Puerto Boyaca,null,null,null
+638,Puerto Caicedo,null,null,null
+639,Puerto Carreno,null,null,null
+640,Puerto Colombia,null,null,null
+641,Puerto Concordia,null,null,null
+642,Puerto Escondido,null,null,null
+643,Puerto Gaitan,null,null,null
+644,Puerto Guzman,null,null,null
+645,Puerto Inirida,null,null,null
+646,Puerto Leguizamo,null,null,null
+647,Puerto Libertador,null,null,null
+648,Puerto Lleras,null,null,null
+649,Puerto Lopez,null,null,null
+650,Puerto Nare,null,null,null
+651,Puerto Narino,null,null,null
+652,Puerto Parra,null,null,null
+653,Puerto Rico,null,null,null
+654,Puerto Rondon,null,null,null
+655,Puerto Salgar,null,null,null
+656,Puerto Santander,null,null,null
+657,Puerto Tejada,null,null,null
+658,Puerto Triunfo,null,null,null
+659,Puerto Wilches,null,null,null
+660,Puli,null,null,null
+661,Pupiales,null,null,null
+662,Purace (Coconuco),null,null,null
+663,Purificacion,null,null,null
+664,Purisima,null,null,null
+665,Quebradanegra,null,null,null
+666,Quetame,null,null,null
+667,Quibdo,null,null,null
+668,Quimbaya,null,null,null
+669,Quinchia,null,null,null
+670,Quipama,null,null,null
+671,Quipile,null,null,null
+672,Rafael,null,null,null
+673,Ragonvalia,null,null,null
+674,Ramiquiri,null,null,null
+675,Raquira,null,null,null
+676,Recetor,null,null,null
+677,Regidor,null,null,null
+678,Remedios,null,null,null
+679,Remolino,null,null,null
+680,Repelon,null,null,null
+681,Restrepo,null,null,null
+682,Retiro,null,null,null
+683,Ricaurte,null,null,null
+684,Rio de Oro,null,null,null
+685,Rio Viejo,null,null,null
+686,Rioblanco,null,null,null
+687,Riofrio,null,null,null
+688,Riohacha,null,null,null
+689,Rionegro,null,null,null
+690,Riosucio,null,null,null
+691,Risaralda,null,null,null
+692,Rivera,null,null,null
+693,Roberto Payan (San Jose),null,null,null
+694,Roldanillo,null,null,null
+695,Roncesvalles,null,null,null
+696,Rondon,null,null,null
+697,Rosas,null,null,null
+698,Rovira,null,null,null
+699,Sabalarga,null,null,null
+700,Sabana de Torres,null,null,null
+701,Sabanagrande,null,null,null
+702,Sabanalarga,null,null,null
+703,Sabaneta,null,null,null
+704,Saboya,null,null,null
+705,Sacama,null,null,null
+706,Sachica,null,null,null
+707,Sahagn,null,null,null
+708,Saladoblanco,null,null,null
+709,Salamina,null,null,null
+710,Salazar,null,null,null
+711,Saldana,null,null,null
+712,Salento,null,null,null
+713,Salgar,null,null,null
+714,Samaca,null,null,null
+715,Samana,null,null,null
+716,Samaniego,null,null,null
+717,Sampues,null,null,null
+718,San Agustin,null,null,null
+719,San Alberto,null,null,null
+720,San Andres,null,null,null
+721,San Andres Sotavento,null,null,null
+722,San Antero,null,null,null
+723,San Antonio,null,null,null
+724,San Antonio de Tequendama,null,null,null
+725,San Benito,null,null,null
+726,San Benito Abad,null,null,null
+727,San Bernardo,null,null,null
+728,San Bernardo del Viento,null,null,null
+729,San Calixto,null,null,null
+730,San Carlos,null,null,null
+731,San Carlos de Guaroa,null,null,null
+732,San Cayetano,null,null,null
+733,San Cristobal,null,null,null
+734,San Diego,null,null,null
+735,San Eduardo,null,null,null
+736,San Estanislao,null,null,null
+737,San Fernando,null,null,null
+738,San Francisco,null,null,null
+739,San Gil,null,null,null
+740,San Jacinto,null,null,null
+741,San Jacinto del Cauca,null,null,null
+742,San Jeronimo,null,null,null
+743,San Joaquin,null,null,null
+744,San Jose,null,null,null
+745,San Jose de Miranda,null,null,null
+746,San Jose de Montana,null,null,null
+747,San Jose de Pare,null,null,null
+748,San Jose del Fragua,null,null,null
+749,San Jose del Guaviare,null,null,null
+750,San Jose del Palmar,null,null,null
+751,San Juan de Arama,null,null,null
+752,San Juan de Betulia,null,null,null
+753,San Juan de Rioseco,null,null,null
+754,San Juan de Uraba,null,null,null
+755,San Juan del Cesar,null,null,null
+756,San Juan Nepomuceno,null,null,null
+757,San Juanito,null,null,null
+758,San Lorenzo,null,null,null
+759,San Luis,null,null,null
+760,San Luis de Gaceno,null,null,null
+761,San Luis de Palenque,null,null,null
+762,San Marcos,null,null,null
+763,San Martin,null,null,null
+764,San Martin de Loba,null,null,null
+765,San Mateo,null,null,null
+766,San Miguel,null,null,null
+767,San Miguel de Sema,null,null,null
+768,San Onofre,null,null,null
+769,San Pablo,null,null,null
+770,San Pablo de Borbur,null,null,null
+771,San Pedro,null,null,null
+772,San Pedro de Cartago,null,null,null
+773,San Pedro de Uraba,null,null,null
+774,San Pelayo,null,null,null
+775,San Rafael,null,null,null
+776,San Roque,null,null,null
+777,San Sebastian,null,null,null
+778,San Sebastian de Buuenavista,null,null,null
+779,San Vicente,null,null,null
+780,San Vicente de Chucuri,null,null,null
+781,San Vicente del Caguan,null,null,null
+782,San Zenon,null,null,null
+783,Sandona,null,null,null
+784,Santa Ana,null,null,null
+785,Santa Barbara,null,null,null
+786,Santa Barbara (Iscuande),null,null,null
+787,Santa Catalina,null,null,null
+788,Santa Cruz (Guachavez),null,null,null
+789,Santa Helena del Opon,null,null,null
+790,Santa Isabel,null,null,null
+791,Santa Lucia,null,null,null
+792,Santa Maria,null,null,null
+793,Santa Marta,null,null,null
+794,Santa Rosa,null,null,null
+795,Santa Rosa de Cabal,null,null,null
+796,Santa Rosa de Osos,null,null,null
+797,Santa Rosa de Viterbo,null,null,null
+798,Santa Rosa del Sur,null,null,null
+799,Santa Rosalia,null,null,null
+800,Santa Sofia,null,null,null
+801,Santafe de Bogota,null,null,null
+802,Santana,null,null,null
+803,Santander de Quilichao,null,null,null
+804,Santiago,null,null,null
+805,Santo Domingo,null,null,null
+806,Santo Tomas,null,null,null
+807,Santuario,null,null,null
+808,Sapuyes,null,null,null
+809,Saravena,null,null,null
+810,Sardinata,null,null,null
+811,Sasaima,null,null,null
+812,Sativanorte,null,null,null
+813,Sativasur,null,null,null
+814,Segovia,null,null,null
+815,Sesquile,null,null,null
+816,Sevilla,null,null,null
+817,Siachoque,null,null,null
+818,Sibate,null,null,null
+819,Sibundoy,null,null,null
+820,Silos,null,null,null
+821,Silvania,null,null,null
+822,Silvia,null,null,null
+823,Simacota,null,null,null
+824,Simijaca,null,null,null
+825,Simiti,null,null,null
+826,Since,null,null,null
+827,Sincelejo,null,null,null
+828,Sipi,null,null,null
+829,Sitionuevo,null,null,null
+830,Soacha,null,null,null
+831,Soata,null,null,null
+832,Socha,null,null,null
+833,Socorro,null,null,null
+834,Socota,null,null,null
+835,Sogamoso,null,null,null
+836,Solano,null,null,null
+837,Soledad,null,null,null
+838,Solita,null,null,null
+839,Somondoco,null,null,null
+840,Sonson,null,null,null
+841,Sopetran,null,null,null
+842,Soplaviento,null,null,null
+843,Sopo,null,null,null
+844,Sora,null,null,null
+845,Soraca,null,null,null
+846,Sotaquira,null,null,null
+847,Sotara (Paispamba),null,null,null
+848,Suaita,null,null,null
+849,Suan,null,null,null
+850,Suarez,null,null,null
+851,Suaza,null,null,null
+852,Subachoque,null,null,null
+853,Sucre,null,null,null
+854,Suesca,null,null,null
+855,Supata,null,null,null
+856,Supia,null,null,null
+857,Surata,null,null,null
+858,Susa,null,null,null
+859,Susacon,null,null,null
+860,Sutamarchan,null,null,null
+861,Sutatausa,null,null,null
+862,Sutatenza,null,null,null
+863,Tabio,null,null,null
+864,Tado,null,null,null
+865,Talaigua Nuevo,null,null,null
+866,Tamalameque,null,null,null
+867,Tamara,null,null,null
+868,Tame,null,null,null
+869,Tamesis,null,null,null
+870,Taminango,null,null,null
+871,Tangua,null,null,null
+872,Taraza,null,null,null
+873,Tarqui,null,null,null
+874,Tarso,null,null,null
+875,Tasco,null,null,null
+876,Tatama,null,null,null
+877,Tauramena,null,null,null
+878,Tausa,null,null,null
+879,Tello,null,null,null
+880,Tena,null,null,null
+881,Tenerife,null,null,null
+882,Tenjo,null,null,null
+883,Tenza,null,null,null
+884,Teorama,null,null,null
+885,Teruel,null,null,null
+886,Tesalia,null,null,null
+887,Tibacuy,null,null,null
+888,Tibana,null,null,null
+889,Tibasosa,null,null,null
+890,Tibirita,null,null,null
+891,Tib,null,null,null
+892,Tierralta,null,null,null
+893,Timana,null,null,null
+894,Timbio,null,null,null
+895,Timbiqui,null,null,null
+896,Tinjaca,null,null,null
+897,Tipacoque,null,null,null
+898,Tiquisio (Puerto Rico),null,null,null
+899,Titiribi,null,null,null
+900,Toca,null,null,null
+901,Tocaima,null,null,null
+902,Tocancipa,null,null,null
+903,Togui,null,null,null
+904,Toledo,null,null,null
+905,Tol,null,null,null
+906,Toluviejo,null,null,null
+907,Tona,null,null,null
+908,Topaga,null,null,null
+909,Topaipi,null,null,null
+910,Toribio,null,null,null
+911,Toro,null,null,null
+912,Tota,null,null,null
+913,Totoro,null,null,null
+914,Trinidad,null,null,null
+915,Trujillo,null,null,null
+916,Tubara,null,null,null
+917,Tulua,null,null,null
+918,Tumaco,null,null,null
+919,Tunja,null,null,null
+920,Tunungua,null,null,null
+921,Tquerres,null,null,null
+922,Turbaco,null,null,null
+923,Turbana,null,null,null
+924,Turbo,null,null,null
+925,Turmeque,null,null,null
+926,Tuta,null,null,null
+927,Tutaza,null,null,null
+928,Ubala,null,null,null
+929,Ubaque,null,null,null
+930,Ubate,null,null,null
+931,Ulloa,null,null,null
+932,mbita,null,null,null
+933,Une,null,null,null
+934,Unguia,null,null,null
+935,Uramita,null,null,null
+936,Uribia,null,null,null
+937,Urrao,null,null,null
+938,Urumita,null,null,null
+939,Usiacuri,null,null,null
+940,tica,null,null,null
+941,Valdivia,null,null,null
+942,Valencia,null,null,null
+943,Valle de San Jose,null,null,null
+944,Valle de San Juan,null,null,null
+945,Valledupar,null,null,null
+946,Valparaiso,null,null,null
+947,Vegachi,null,null,null
+948,Velez,null,null,null
+949,Venadillo,null,null,null
+950,Venecia,null,null,null
+951,Venecia (Ospina Perez),null,null,null
+952,Ventaquemada,null,null,null
+953,Vergara,null,null,null
+954,Versalles,null,null,null
+955,Vetas,null,null,null
+956,Viani,null,null,null
+957,Victoria,null,null,null
+958,Vigia del Fuerte,null,null,null
+959,Vijes,null,null,null
+960,Villa de Leyva,null,null,null
+961,Villa del Rosario,null,null,null
+962,Villa Gamuez (La Hormiga),null,null,null
+963,Villa Garzon,null,null,null
+964,Villacaro,null,null,null
+965,Villagomez,null,null,null
+966,Villahermosa,null,null,null
+967,Villamaria,null,null,null
+968,Villanueva,null,null,null
+969,Villapinzon,null,null,null
+970,Villarrica,null,null,null
+971,Villavicencio,null,null,null
+972,Villavieja,null,null,null
+973,Villeta,null,null,null
+974,Viota,null,null,null
+975,Viracacha,null,null,null
+976,Vistahermosa,null,null,null
+977,Viterbo,null,null,null
+978,Yacopi,null,null,null
+979,Yacuanquer,null,null,null
+980,Yaguara,null,null,null
+981,Yali,null,null,null
+982,Yarumal,null,null,null
+983,Yolombo,null,null,null
+984,Yondo (Casabe),null,null,null
+985,Yopal,null,null,null
+986,Yotoco,null,null,null
+987,Yumbo,null,null,null
+988,Zambrano,null,null,null
+989,Zapatoca,null,null,null
+990,Zaragoza,null,null,null
+991,Zarzal,null,null,null
+992,Zetaquira,null,null,null
+993,Zipacon,null,null,null
+994,Zipaquira,null,null,null
