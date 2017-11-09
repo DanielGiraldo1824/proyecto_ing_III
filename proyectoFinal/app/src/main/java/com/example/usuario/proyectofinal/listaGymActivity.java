@@ -1,19 +1,16 @@
 package com.example.usuario.proyectofinal;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,21 +26,36 @@ import java.util.Iterator;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import static android.graphics.Color.parseColor;
+public class listaGymActivity extends AppCompatActivity {
+    private String lenguajeProgramacion[]=new String[]{"GYM1","GYM2","GYM3","GYM4"};
 
-public class UsuarioActivity extends AppCompatActivity {
-    String cedula,registroGym;
+    private Integer[] imgid={
+            R.drawable.modelo,
+            R.drawable.modelo,
+            R.drawable.modelo,
+            R.drawable.modelo,
+            R.drawable.modelo
+    };
+    private ListView lista;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_usuario);
-        cedula = (String) getIntent().getExtras().getSerializable("cedula");
-        new ConsultRegGym().execute();
-
+        setContentView(R.layout.activity_lista_gym);
+        new ConsultGym().execute();
+        LenguajeListAdapterArrendo adapter=new LenguajeListAdapterArrendo(this,lenguajeProgramacion,imgid);
+        lista=(ListView)findViewById(R.id.mi_lista);
+        lista.setAdapter(adapter);
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent ListSong = new Intent(getApplicationContext(), DetalleGymActivity.class);
+                startActivity(ListSong);
+            }
+        });
     }
-
-    //hilo para registrar un cliente
-    public class ConsultRegGym extends AsyncTask<String, Void, String> {
+    //hilo para consultar los gimansios registrados
+    public class ConsultGym extends AsyncTask<String, Void, String> {
 
         protected void onPreExecute(){}
 
@@ -51,13 +63,11 @@ public class UsuarioActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarRegGym.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarGym.php");
 
                 JSONObject postDataParams = new JSONObject();
 
-                postDataParams.put("user", cedula);
-
-                Log.e("params",postDataParams.toString());
+                postDataParams.put("tokens","lalapesca");
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -105,17 +115,19 @@ public class UsuarioActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             //json con el cual visualizamos la respuesta del servicio
-            JSONObject obj = null;
+            JSONArray obj = null;
             try {
-                obj = new JSONObject(result);
-                registroGym = obj.getString("total");
+                Log.e("SERVICIO", result);
+                obj = new JSONArray(result);
                 //identificamos si existe un usuario registrado con ese id y pass
-                if (registroGym.equals("0"))
+                if (true)
                 {
-                    noGym("No te encuentras Registrado en ningun Gym","BIENVENIDO....");
+                    JSONObject nombre=obj.getJSONObject(0);
+                    Log.e("SERVICIO",nombre.getString("name"));
 
                 }else{
-
+                    Toast.makeText(getApplicationContext(), "usuario o contraseña incorrectos",
+                            Toast.LENGTH_LONG).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -150,73 +162,4 @@ public class UsuarioActivity extends AppCompatActivity {
         }
         return result.toString();
     }
-
-
-
-
-
-    //cuando Identifica que el usuario no se encuentra registrado en ningun gimnasio
-    public void noGym(String m, String titulo){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(UsuarioActivity.this);
-        alertDialog.setCancelable(false);
-        alertDialog.setTitle(titulo);
-        TextView myMsg = new TextView(UsuarioActivity.this);
-        myMsg.setText("\n"+m+"\n ¿Desea registrarte? \n");
-        myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
-        myMsg.setPadding(20, 0, 20, 0);
-        alertDialog.setView(myMsg);
-        alertDialog.setIcon(R.drawable.ic_launcher_background);
-        alertDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        Intent ListGym = new Intent(getApplicationContext(), listaGymActivity.class);
-                        startActivity(ListGym);
-
-                    }
-                }
-        );
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                }
-
-        );
-        // alertDialog.show();
-        AlertDialog a = alertDialog.create();
-        cambiar_color_texto_alertdialog(a);
-    }
-    public void cambiar_color_texto_alertdialog(AlertDialog a) {
-        a.show();
-        Button BN = a.getButton(DialogInterface.BUTTON_NEGATIVE);
-        BN.setTextColor(parseColor("#2E9AFE"));
-        Button BA = a.getButton(DialogInterface.BUTTON_POSITIVE);
-        BA.setTextColor(parseColor("#2E9AFE"));
-    }
-
-    //enviar al cliente a las opciones del contador
-    public void rutinas(View view){
-        if (registroGym.equals("0"))
-        {
-            noGym("para acceder a las rutinas debes de estar registrado","Mensaje del Sistema");
-
-        }else{
-
-        }
-    }
-    //enviar al cliente a las opciones del contador
-    public void medidas(View view){
-        if (registroGym.equals("0"))
-        {
-            noGym("para acceder a las medidas debes de estar registrado","Mensaje del Sistema");
-
-        }else{
-
-        }
-    }
-    public void contabilizador(View view){
-        Intent intent = new Intent(this, ContabilizadorActivity.class);
-        startActivity(intent);
-    }
 }
-

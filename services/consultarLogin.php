@@ -21,7 +21,7 @@
 				$sql = "SELECT COUNT(c.name) as total,address,name FROM client c WHERE c.identificationCard=$user and c.password='$pass'";
 				
 				//adding the path and name to database 
-				$result = mysqli_query( $con,$sql) or die('Could not look up user information; ' . mysqli_error($conn));
+				$result = mysqli_query( $con,$sql) or die('Could not look up user information; ' . mysqli_error($con));
 				if($result){
 					$extraido= mysqli_fetch_array($result);
 					

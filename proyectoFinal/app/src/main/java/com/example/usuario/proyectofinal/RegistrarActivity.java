@@ -28,7 +28,7 @@ public class RegistrarActivity extends AppCompatActivity {
     private EditText cedula,nombre,telefono,pass;
     private Spinner tipoUser;
     //el URlL del archivo del servidor donde se envia la imagen
-    private static final String UPLOAD_URL = "http://192.168.1.10/Universidad/Android2/proyectofinal/registrarUsuario.php";
+    private static final String UPLOAD_URL = "http://192.168.1.111/prueba/proyecto_ing_III/services/registrarUsuario.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class RegistrarActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.10/Universidad/Android2/proyectofinal/registrarUsuario.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/registrarUsuario.php");
 
                 JSONObject postDataParams = new JSONObject();
 

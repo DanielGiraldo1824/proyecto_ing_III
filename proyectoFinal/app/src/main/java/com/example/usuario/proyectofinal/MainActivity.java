@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.10/Universidad/Android2/proyectofinal/consultarLogin.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarLogin.php");
 
                 JSONObject postDataParams = new JSONObject();
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     }else{
-                        Toast.makeText(getApplicationContext(), "trae 0",
+                        Toast.makeText(getApplicationContext(), "usuario o contraseña incorrectos",
                                 Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {

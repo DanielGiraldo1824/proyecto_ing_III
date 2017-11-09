@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class ContabilizadorActivity extends AppCompatActivity implements SensorEventListener{
@@ -31,10 +32,8 @@ public class ContabilizadorActivity extends AppCompatActivity implements SensorE
     @Override
     public void onSensorChanged(SensorEvent event) {
         float valor=Float.parseFloat(String.valueOf(event.values[0]));
-
         contador.setText(""+total);
-
-        if(valor==0){
+        if(valor == 0){
             total++;
         }else{
 
