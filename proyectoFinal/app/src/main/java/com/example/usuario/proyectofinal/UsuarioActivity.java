@@ -168,8 +168,9 @@ public class UsuarioActivity extends AppCompatActivity {
         alertDialog.setIcon(R.drawable.ic_launcher_background);
         alertDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
+                        finish();
                         Intent ListGym = new Intent(getApplicationContext(), listaGymActivity.class);
+                        ListGym.putExtra("cedula", cedula);
                         startActivity(ListGym);
 
                     }
@@ -215,8 +216,13 @@ public class UsuarioActivity extends AppCompatActivity {
         }
     }
     public void contabilizador(View view){
-        Intent intent = new Intent(this, ContabilizadorActivity.class);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
 

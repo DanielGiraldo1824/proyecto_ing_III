@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -25,7 +26,7 @@ import java.util.Iterator;
 import javax.net.ssl.HttpsURLConnection;
 
 public class RegistrarActivity extends AppCompatActivity {
-    private EditText cedula,nombre,telefono,pass;
+    private EditText cedula,nombre,telefono,pass,idGym;
     private Spinner tipoUser;
     //el URlL del archivo del servidor donde se envia la imagen
     private static final String UPLOAD_URL = "http://192.168.1.111/prueba/proyecto_ing_III/services/registrarUsuario.php";
@@ -38,11 +39,28 @@ public class RegistrarActivity extends AppCompatActivity {
         nombre = (EditText) findViewById(R.id.idRegistroNombre);
         telefono = (EditText) findViewById(R.id.idRegistroTelefono);
         pass = (EditText) findViewById(R.id.idRegistroContrase);
+        idGym = (EditText) findViewById(R.id.editText);
         //llenar spinner
         tipoUser = (Spinner) findViewById(R.id.idTipoClient);
         ArrayAdapter spinner_adapter = ArrayAdapter.createFromResource( this, R.array.tpoClient , android.R.layout.simple_spinner_item);
         spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipoUser.setAdapter(spinner_adapter);
+        tipoUser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
+                Log.e("Registro",selectedItem);
+                if(id == 1){
+                    idGym.setVisibility(view.VISIBLE);
+                }else{
+                    idGym.setVisibility(view.INVISIBLE);
+                }
+            }
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+
+            }
+        });
     }
     //metodo que lleva al activity Login
     public void cancelarRegistro(View view){
@@ -73,6 +91,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 postDataParams.put("nombre", nombre.getText().toString());
                 postDataParams.put("telefono", telefono.getText().toString());
                 postDataParams.put("pass", pass.getText().toString());
+                postDataParams.put("gym",idGym.getText().toString());
 
                 Log.e("params",postDataParams.toString());
 

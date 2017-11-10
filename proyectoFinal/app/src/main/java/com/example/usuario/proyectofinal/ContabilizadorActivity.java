@@ -33,11 +33,13 @@ public class ContabilizadorActivity extends AppCompatActivity implements SensorE
     public void onSensorChanged(SensorEvent event) {
         float valor=Float.parseFloat(String.valueOf(event.values[0]));
         contador.setText(""+total);
-        if(valor == 0){
-            total++;
-        }else{
 
-        }
+            if (valor == 0) {
+                total++;
+            } else {
+
+            }
+
     }
 
     @Override

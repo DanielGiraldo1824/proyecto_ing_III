@@ -16,7 +16,7 @@
 
 			//trying para almacenar los datos en la base de datos
 			try{
-				   $sqls="SELECT g.name,g.longitud,g.latitud,g.Descripcion,g.mensualidad FROM gym g";
+				   $sqls="SELECT g.id_Gym,g.name,g.longitud,g.latitud,g.Descripcion,g.mensualidad FROM gym g";
         			$result=mysqli_query( $con,$sqls) or die('Could not look up user information; ' . mysqli_error($con));
         			//valido si existe al menos un registro
            			 while ($row=mysqli_fetch_assoc($result))
@@ -24,10 +24,11 @@
                 		$name = $row['name'];
                 		$longitud = $row['longitud'];
                 		$latitud = $row['latitud'];
+                		$id_Gym = $row['id_Gym'];
                 		$Descripcion = $row['Descripcion'];
                 		$mensualidad = $row['mensualidad'];
 
-                		$listGym[] = array('name'=>$name,'longitud'=>$longitud,'latitud'=>$latitud,'Descripcion'=>$Descripcion,'mensualidad'=>$mensualidad);
+                		$listGym[] = array('id'=>$id_Gym,'name'=>$name,'longitud'=>$longitud,'latitud'=>$latitud,'Descripcion'=>$Descripcion,'mensualidad'=>$mensualidad);
             		}
             		
             		echo json_encode($listGym);

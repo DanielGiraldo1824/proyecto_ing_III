@@ -1,13 +1,18 @@
 package com.example.usuario.proyectofinal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -26,8 +31,11 @@ import java.util.Iterator;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import static android.graphics.Color.parseColor;
+
 public class listaGymActivity extends AppCompatActivity {
-    private String lenguajeProgramacion[]=new String[]{"GYM1","GYM2","GYM3","GYM4"};
+    private String lenguajeProgramacion[];
+    private String cedula;
 
     private Integer[] imgid={
             R.drawable.modelo,
@@ -38,21 +46,17 @@ public class listaGymActivity extends AppCompatActivity {
     };
     private ListView lista;
 
+    //json con el cual visualizamos la respuesta del servicio
+    public JSONArray obj = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_gym);
+        cedula = (String) getIntent().getExtras().getSerializable("cedula");
         new ConsultGym().execute();
-        LenguajeListAdapterArrendo adapter=new LenguajeListAdapterArrendo(this,lenguajeProgramacion,imgid);
-        lista=(ListView)findViewById(R.id.mi_lista);
-        lista.setAdapter(adapter);
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent ListSong = new Intent(getApplicationContext(), DetalleGymActivity.class);
-                startActivity(ListSong);
-            }
-        });
+
+
     }
     //hilo para consultar los gimansios registrados
     public class ConsultGym extends AsyncTask<String, Void, String> {
@@ -114,21 +118,15 @@ public class listaGymActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            //json con el cual visualizamos la respuesta del servicio
-            JSONArray obj = null;
-            try {
-                Log.e("SERVICIO", result);
-                obj = new JSONArray(result);
-                //identificamos si existe un usuario registrado con ese id y pass
-                if (true)
-                {
-                    JSONObject nombre=obj.getJSONObject(0);
-                    Log.e("SERVICIO",nombre.getString("name"));
 
-                }else{
-                    Toast.makeText(getApplicationContext(), "usuario o contraseña incorrectos",
-                            Toast.LENGTH_LONG).show();
-                }
+            try {
+                    Log.e("SERVICIO", result);
+                    obj = new JSONArray(result);
+                    //identificamos si existe un usuario registrado con ese id y pass
+                    lenguajeProgramacion = new String[obj.length()];
+                    JSONObject nombre=obj.getJSONObject(0);
+                    lenguajeProgramacion[0] = nombre.getString("name");
+                    llenarLista();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -161,5 +159,34 @@ public class listaGymActivity extends AppCompatActivity {
 
         }
         return result.toString();
+    }
+    public void llenarLista(){
+        LenguajeListAdapterArrendo adapter=new LenguajeListAdapterArrendo(this,lenguajeProgramacion,imgid);
+        lista=(ListView)findViewById(R.id.mi_lista);
+        lista.setAdapter(adapter);
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                finish();
+                Intent ListSong = new Intent(getApplicationContext(), DetalleGymActivity.class);
+
+                JSONObject nombre= null;
+                try {
+                    nombre = obj.getJSONObject(0);
+                    ListSong.putExtra("cedula", cedula);
+                    ListSong.putExtra("id", nombre.getString("id"));
+                    startActivity(ListSong);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), UsuarioActivity.class);
+        intent.putExtra("cedula", cedula);
+        startActivity(intent);
     }
 }

@@ -1,10 +1,13 @@
 package com.example.usuario.proyectofinal;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -13,11 +16,26 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class DetalleGymActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
     private SliderLayout mDemoSlider;
-
+    private String cedula,id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +43,11 @@ public class DetalleGymActivity extends AppCompatActivity implements BaseSliderV
         setContentView(R.layout.activity_detalle_gym);
         mDemoSlider = (SliderLayout) findViewById(R.id.slider);
         HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
+        cedula = (String) getIntent().getExtras().getSerializable("cedula");
+        id = (String) getIntent().getExtras().getSerializable("id");
+
+
+
         file_maps.put("Comedor", R.drawable.comedor);
         file_maps.put("Cocina",R.drawable.cocina);
         file_maps.put("Sala",R.drawable.sala);
@@ -94,5 +117,132 @@ public class DetalleGymActivity extends AppCompatActivity implements BaseSliderV
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    //evento para registrar el cliente
+    public void registrarGym(View view)
+    {
+        new SendReg().execute();
+    }
+
+    //hilo para registrar un cliente
+    public class SendReg extends AsyncTask<String, Void, String> {
+
+        protected void onPreExecute(){}
+
+        protected String doInBackground(String... arg0) {
+
+            try{
+
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/registrarGym.php");
+
+                JSONObject postDataParams = new JSONObject();
+
+                Calendar c = Calendar.getInstance();
+                System.out.println("Current time => " + c.getTime());
+
+                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                String formattedDate = df.format(c.getTime());
+
+                Log.e("GYM",cedula);
+                Log.e("GYM",id);
+                Log.e("GYM",formattedDate);
+
+                postDataParams.put("gym", id);
+                postDataParams.put("cedula", cedula);
+                postDataParams.put("fecha", formattedDate);
+
+                Log.e("params",postDataParams.toString());
+
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setReadTimeout(15000 /* milliseconds */);
+                conn.setConnectTimeout(15000 /* milliseconds */);
+                conn.setRequestMethod("POST");
+                conn.setDoInput(true);
+                conn.setDoOutput(true);
+
+                OutputStream os = conn.getOutputStream();
+                BufferedWriter writer = new BufferedWriter(
+                        new OutputStreamWriter(os, "UTF-8"));
+                writer.write(getPostDataString(postDataParams));
+
+                writer.flush();
+                writer.close();
+                os.close();
+
+                int responseCode=conn.getResponseCode();
+
+                if (responseCode == HttpsURLConnection.HTTP_OK) {
+
+                    BufferedReader in=new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    StringBuffer sb = new StringBuffer("");
+                    String line="";
+
+                    while((line = in.readLine()) != null) {
+
+                        sb.append(line);
+                        break;
+                    }
+
+                    in.close();
+                    return sb.toString();
+
+                }
+                else {
+                    return new String("false : "+responseCode);
+                }
+            }
+            catch(Exception e){
+                return new String("Exception: " + e.getMessage());
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Log.e("Registro", result);
+            if (result.equals("true"))
+            {
+                Toast.makeText(getApplicationContext(), "Usuario Registrado Exitosamente",
+                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), UsuarioActivity.class);
+                intent.putExtra("cedula", cedula);
+                startActivity(intent);
+                finish();
+            }else{
+                Toast.makeText(getApplicationContext(), "Cedula ingresada, ya se encuentra registrada",
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    public String getPostDataString(JSONObject params) throws Exception {
+
+        StringBuilder result = new StringBuilder();
+        boolean first = true;
+
+        Iterator<String> itr = params.keys();
+
+        while(itr.hasNext()){
+
+            String key= itr.next();
+            Object value = params.get(key);
+
+            if (first)
+                first = false;
+            else
+                result.append("&");
+
+            result.append(URLEncoder.encode(key, "UTF-8"));
+            result.append("=");
+            result.append(URLEncoder.encode(value.toString(), "UTF-8"));
+
+        }
+        return result.toString();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), listaGymActivity.class);
+        intent.putExtra("cedula", cedula);
+        startActivity(intent);
     }
 }
