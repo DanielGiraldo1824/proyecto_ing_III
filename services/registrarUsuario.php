@@ -18,14 +18,20 @@
 			$telefono = $_POST['telefono'];
             $pass = $_POST['pass'];
             $tipo = $_POST['tipoClient'];
+            $gym = $_POST['gym'];
 
 			//trying para almacenar los datos en la base de datos
 			try{
 				$sql = "INSERT INTO `client` (`identificationCard`, `name`, `address`, `number_cel`, `password`) VALUES ('$cedula', '$nombre', '$tipo', '$telefono', '$pass');";
 				
 				//adding the path and name to database 
-				if(mysqli_query($con,$sql)){
 
+				if(mysqli_query($con,$sql)){
+					//identifica si es un instructor lo registra en la tabla de instructor 
+					if($tipo == "1"){
+						$sl = "INSERT INTO `instructor` (`identificationCardIns`, `name_Ins`, `address_Ins`, `number_Cel_Ins`, `id_Gym`) VALUES ('$cedula', '$nombre', '$tipo', '$telefono', '$gym');";
+						mysqli_query($con,$sl);
+					}
 					//filling response array with values
 					$response['error'] = false; 
 					$response['url'] = $cedula; 
@@ -44,7 +50,7 @@
 				$response['message']=$e->getMessage();
 			}		
 			//closing the connection
-
+			
 			mysqli_close($con);
 
 		}else{

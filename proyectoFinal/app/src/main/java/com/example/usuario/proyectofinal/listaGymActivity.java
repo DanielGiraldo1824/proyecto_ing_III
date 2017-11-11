@@ -160,6 +160,8 @@ public class listaGymActivity extends AppCompatActivity {
         }
         return result.toString();
     }
+
+
     public void llenarLista(){
         LenguajeListAdapterArrendo adapter=new LenguajeListAdapterArrendo(this,lenguajeProgramacion,imgid);
         lista=(ListView)findViewById(R.id.mi_lista);

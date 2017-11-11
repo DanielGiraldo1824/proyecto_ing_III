@@ -37,7 +37,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".SentadillasActivity" />
-        <activity android:name=".InstrctorActivity"></activity>
+        <activity android:name=".InstructorActivity"></activity>
     </application>
 
 </manifest>

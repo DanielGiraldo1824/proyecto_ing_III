@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(getApplicationContext(), "Bienvenido Instructor "+nombre,
                                     Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getApplicationContext(), UsuarioActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), InstructorActivity.class);
                             intent.putExtra("cedula", user.getText().toString());
                             startActivity(intent);
                         }
