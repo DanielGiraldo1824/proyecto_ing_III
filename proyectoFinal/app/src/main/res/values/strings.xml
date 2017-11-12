@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">proyectoFinal</string>
+    <string name="title_activity_detalle_gym">DetalleGymActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>
