@@ -133,7 +133,7 @@ public class DetalleGymActivity extends AppCompatActivity implements BaseSliderV
 
             try{
 
-                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/registrarGym.php");
+                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/registrarGym.php");
 
                 JSONObject postDataParams = new JSONObject();
 

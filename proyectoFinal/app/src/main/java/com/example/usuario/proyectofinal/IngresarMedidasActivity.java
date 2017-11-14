@@ -1,22 +1,14 @@
 package com.example.usuario.proyectofinal;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ListView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -31,35 +23,31 @@ import java.util.Iterator;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import static android.graphics.Color.parseColor;
+public class IngresarMedidasActivity extends AppCompatActivity {
 
-public class listaGymActivity extends AppCompatActivity {
-    private String lenguajeProgramacion[];
-    private String cedula;
-
-    private Integer[] imgid={
-            R.drawable.modelo,
-            R.drawable.modelo,
-            R.drawable.modelo,
-            R.drawable.modelo,
-            R.drawable.modelo
-    };
-    private ListView lista;
-
-    //json con el cual visualizamos la respuesta del servicio
-    public JSONArray obj = null;
-
+    EditText grasa,altura,ritmo,fecha;
+    String cedula,gym,cliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_gym);
+        setContentView(R.layout.activity_ingresar_medidas);
+
+        grasa = (EditText)findViewById(R.id.etGrasa);
+        altura = (EditText)findViewById(R.id.etAltura);
+        ritmo = (EditText)findViewById(R.id.etRitmo);
+        fecha = (EditText)findViewById(R.id.etFecha);
+
+        cliente = (String) getIntent().getExtras().getSerializable("cliente");
+        gym = (String) getIntent().getExtras().getSerializable("gym");
         cedula = (String) getIntent().getExtras().getSerializable("cedula");
-        new ConsultGym().execute();
-
-
     }
-    //hilo para consultar los gimansios registrados
-    public class ConsultGym extends AsyncTask<String, Void, String> {
+
+    public void registrarMedidas(View view){
+        new SendRegMedidas().execute();
+    }
+
+    //hilo para registrar medidas
+    public class SendRegMedidas extends AsyncTask<String, Void, String> {
 
         protected void onPreExecute(){}
 
@@ -67,11 +55,19 @@ public class listaGymActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/consultarGym.php");
+                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/registrarMedidas.php");
 
                 JSONObject postDataParams = new JSONObject();
 
-                postDataParams.put("tokens","lalapesca");
+                postDataParams.put("grasa", grasa.getText().toString());
+                postDataParams.put("altura", altura.getText().toString());
+                postDataParams.put("ritmo", ritmo.getText().toString());
+                postDataParams.put("fecha", fecha.getText().toString());
+                postDataParams.put("gym", gym);
+                postDataParams.put("instructor", cedula);
+                postDataParams.put("cliente", cliente);
+
+                Log.e("params",postDataParams.toString());
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -118,23 +114,16 @@ public class listaGymActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-
-            try {
-                    Log.e("SERVICIO", result);
-                    obj = new JSONArray(result);
-                    //identificamos si existe un usuario registrado con ese id y pass
-                    lenguajeProgramacion = new String[obj.length()];
-                    for (int i=0; i < obj.length();i++) {
-                        JSONObject nombre = obj.getJSONObject(i);
-                        lenguajeProgramacion[i] = nombre.getString("name");
-                    }
-                    llenarLista();
-            } catch (JSONException e) {
-                e.printStackTrace();
+            Log.e("Registro", result);
+            if (result.equals("true"))
+            {
+                Toast.makeText(getApplicationContext(), "Medidas Registrado Exitosamente",
+                        Toast.LENGTH_LONG).show();
+                finish();
+            }else{
+                Toast.makeText(getApplicationContext(), "Error registrando las medidas",
+                        Toast.LENGTH_LONG).show();
             }
-
-
-
         }
     }
 
@@ -163,34 +152,4 @@ public class listaGymActivity extends AppCompatActivity {
         return result.toString();
     }
 
-
-    public void llenarLista(){
-        LenguajeListAdapterArrendo adapter=new LenguajeListAdapterArrendo(this,lenguajeProgramacion,imgid);
-        lista=(ListView)findViewById(R.id.mi_lista);
-        lista.setAdapter(adapter);
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                finish();
-                Intent ListSong = new Intent(getApplicationContext(), DetalleGymActivity.class);
-
-                JSONObject nombre= null;
-                try {
-                    nombre = obj.getJSONObject(0);
-                    ListSong.putExtra("cedula", cedula);
-                    ListSong.putExtra("id", nombre.getString("id"));
-                    startActivity(ListSong);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-    }
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), UsuarioActivity.class);
-        intent.putExtra("cedula", cedula);
-        startActivity(intent);
-    }
 }

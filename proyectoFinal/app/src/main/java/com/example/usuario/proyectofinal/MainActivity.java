@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarLogin.php");
+                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/consultarLogin.php");
 
                 JSONObject postDataParams = new JSONObject();
 
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
                 //json con el cual visualizamos la respuesta del servicio
                 JSONObject obj = null;
+                Log.e(" ESTO TRAE", result);
                 try {
                     obj = new JSONObject(result);
                     //identificamos si existe un usuario registrado con ese id y pass
@@ -130,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), InstructorActivity.class);
                             intent.putExtra("cedula", user.getText().toString());
+                            intent.putExtra("gym", obj.getString("gym"));
                             startActivity(intent);
                         }
 

@@ -24,12 +24,26 @@
 				$result = mysqli_query( $con,$sql) or die('Could not look up user information; ' . mysqli_error($con));
 				if($result){
 					$extraido= mysqli_fetch_array($result);
+					if($extraido['address'] == "0"){
+						$response['error']=true;
+						$response['total']=$extraido['total'];
+						$response['tipo']=$extraido['address'];
+						$response['name']=$extraido['name'];
+						echo json_encode($response);
+					}else{
+
+						$sql = "SELECT COUNT(i.identificationCardIns) as total,i.address_Ins,i.name_Ins,i.id_Gym FROM instructor i where identificationCardIns = $user ";
+						//adding the path and name to database 
+						$result = mysqli_query( $con,$sql) or die('Could not look up user information; ' . mysqli_error($con));
+						$extraido= mysqli_fetch_array($result);
+						$response['error']=true;
+						$response['total']=$extraido['total'];
+						$response['tipo']=$extraido['address_Ins'];
+						$response['name']=$extraido['name_Ins'];
+						$response['gym']=$extraido['id_Gym'];
+						echo json_encode($response);
+					}
 					
-					$response['error']=true;
-					$response['total']=$extraido['total'];
-					$response['tipo']=$extraido['address'];
-					$response['name']=$extraido['name'];
-					echo json_encode($response);
 				}else{
 					echo json_encode($response);
 				}
