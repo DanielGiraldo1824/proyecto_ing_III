@@ -40,7 +40,7 @@ class LenguajeListAdapterArrendo extends ArrayAdapter<String> {
         imageView.setImageResource(integers[posicion]);
         LinearLayout.LayoutParams layoutParams  = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,200);
         imageView.setLayoutParams(layoutParams);
-        etxDescripcion.setText("Mensualidd Gym : $1.200.000");
+        etxDescripcion.setText("Mensualidd Gym : $20.000");
 
         return rowView;
     }

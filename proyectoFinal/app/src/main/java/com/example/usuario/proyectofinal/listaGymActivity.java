@@ -67,7 +67,7 @@ public class listaGymActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/consultarGym.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarGym.php");
 
                 JSONObject postDataParams = new JSONObject();
 

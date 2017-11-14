@@ -61,7 +61,7 @@ public class InstructorActivity extends Activity {
 
             try{
 
-                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/consultarClient.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarClient.php");
 
                 JSONObject postDataParams = new JSONObject();
 

@@ -10,16 +10,10 @@
         android:layout_height="101dp"
         android:orientation="vertical"></LinearLayout>
 
-    <EditText
-        android:id="@+id/inputSearch"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Cedula del Cliente"
-        android:inputType="textVisiblePassword" />
 
     <!-- List View de elementos  -->
     <ListView
-        android:id="@+id/list_view"
+        android:id="@+id/list_views"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 

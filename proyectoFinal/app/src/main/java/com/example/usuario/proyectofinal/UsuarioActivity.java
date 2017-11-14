@@ -52,7 +52,7 @@ public class UsuarioActivity extends AppCompatActivity {
             try{
 
                 //URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarRegGym.php");
-                URL url = new URL("http://192.168.1.10/Universidad/proyecto_ing_III/services/consultarRegGym.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarRegGym.php");
                 JSONObject postDataParams = new JSONObject();
 
                 postDataParams.put("user", cedula);
@@ -202,7 +202,9 @@ public class UsuarioActivity extends AppCompatActivity {
             noGym("para acceder a las rutinas debes de estar registrado","Mensaje del Sistema");
 
         }else{
-
+            Intent intent = new Intent(getApplicationContext(), ConsltarFoodActivity.class);
+            intent.putExtra("cedula", cedula);
+            startActivity(intent);
         }
     }
     //enviar al cliente a las opciones del contador

@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -23,31 +25,22 @@ import java.util.Iterator;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class IngresarMedidasActivity extends AppCompatActivity {
-
-    EditText grasa,altura,ritmo,fecha;
-    String cedula,gym,cliente;
+public class ConsltarFoodActivity extends AppCompatActivity {
+    String cedula;
+    private ListView lv;
+    private String tokens[];
+    ArrayAdapter<String> adapter;
+    public JSONArray obj = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ingresar_medidas);
-
-        grasa = (EditText)findViewById(R.id.etGrasa);
-        altura = (EditText)findViewById(R.id.etAltura);
-        ritmo = (EditText)findViewById(R.id.etRitmo);
-        fecha = (EditText)findViewById(R.id.etFecha);
-
-        cliente = (String) getIntent().getExtras().getSerializable("cliente");
-        gym = (String) getIntent().getExtras().getSerializable("gym");
+        setContentView(R.layout.activity_consltar_food);
         cedula = (String) getIntent().getExtras().getSerializable("cedula");
+        new ConsultMedidas().execute();
     }
 
-    public void registrarMedidas(View view){
-        new SendRegMedidas().execute();
-    }
-
-    //hilo para registrar medidas
-    public class SendRegMedidas extends AsyncTask<String, Void, String> {
+    //hilo para consultar los gimansios registrados
+    public class ConsultMedidas extends AsyncTask<String, Void, String> {
 
         protected void onPreExecute(){}
 
@@ -55,19 +48,11 @@ public class IngresarMedidasActivity extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/registrarMedidas.php");
+                URL url = new URL("http://192.168.1.111/prueba/proyecto_ing_III/services/consultarFoodCliente.php");
 
                 JSONObject postDataParams = new JSONObject();
 
-                postDataParams.put("grasa", grasa.getText().toString());
-                postDataParams.put("altura", altura.getText().toString());
-                postDataParams.put("ritmo", ritmo.getText().toString());
-                postDataParams.put("fecha", fecha.getText().toString());
-                postDataParams.put("gym", gym);
-                postDataParams.put("instructor", cedula);
-                postDataParams.put("cliente", cliente);
-
-                Log.e("params",postDataParams.toString());
+                postDataParams.put("cedula",cedula);
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -114,16 +99,23 @@ public class IngresarMedidasActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            Log.e("Registro", result);
-            if (result.equals("true"))
-            {
-                Toast.makeText(getApplicationContext(), "Medidas Registrado Exitosamente",
-                        Toast.LENGTH_LONG).show();
-                finish();
-            }else{
-                Toast.makeText(getApplicationContext(), "Error registrando las medidas",
-                        Toast.LENGTH_LONG).show();
+
+            try {
+                Log.e("SERVICIO", result);
+                obj = new JSONArray(result);
+                //identificamos si existe un usuario registrado con ese id y pass
+                tokens = new String[obj.length()];
+                for (int i=0; i < obj.length();i++) {
+                    JSONObject nombre = obj.getJSONObject(i);
+                    tokens[i] = "Desayuno = "+nombre.getString("desayno")+"\n  Almuerzo = "+nombre.getString("almerzo")+"\n  Cena = "+nombre.getString("cena");
+                }
+                llenarCliente();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
+
+
+
         }
     }
 
@@ -152,4 +144,25 @@ public class IngresarMedidasActivity extends AppCompatActivity {
         return result.toString();
     }
 
+    public void llenarCliente(){
+        lv = (ListView) findViewById(R.id.list_views);
+        lv.setTextFilterEnabled(true);
+
+        adapter = new ArrayAdapter<String>(this,R.layout.listmedidas, R.id.codigo_token,tokens);
+
+        lv.setAdapter(adapter);
+
+
+        // Evento para cuando doy click en algun elemento de la lista ( ListView )
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+                                    long id) {
+
+
+            }
+
+        });
+    }
 }

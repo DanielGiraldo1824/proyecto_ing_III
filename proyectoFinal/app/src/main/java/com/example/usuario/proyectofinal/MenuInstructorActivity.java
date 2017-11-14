@@ -26,7 +26,7 @@ public class MenuInstructorActivity extends AppCompatActivity {
     }
 
     public void alimentos(View view){
-        Intent intent = new Intent(getApplicationContext(), MenuInstructorActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FoodActivity.class);
         intent.putExtra("cedula", cedula);
         intent.putExtra("gym", gym);
         intent.putExtra("cliente", cliente);

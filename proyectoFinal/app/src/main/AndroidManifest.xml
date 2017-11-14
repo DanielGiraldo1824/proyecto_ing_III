@@ -40,7 +40,9 @@
         <activity android:name=".InstructorActivity" />
         <activity android:name=".MenuInstructorActivity" />
         <activity android:name=".IngresarMedidasActivity" />
-        <activity android:name=".ConsultarMedidaActivity"></activity>
+        <activity android:name=".ConsultarMedidaActivity" />
+        <activity android:name=".FoodActivity" />
+        <activity android:name=".ConsltarFoodActivity"></activity>
     </application>
 
 </manifest>
