@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.DescripcionAlimentacionActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvTituloAlimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alimentacion"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06" />
+
+    <TextView
+        android:id="@+id/tvNombreAlimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvDescripcionAlimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:layout_weight="0.08" />
+
+    <ImageView
+        android:id="@+id/ivAlimentacionSeleccionada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.51"
+        android:contentDescription="Seleccionada" />
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.31"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="4dp"
+        android:spacing="8dp" />
+</LinearLayout>

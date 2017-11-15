@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.ContabilizadorActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvContabilizador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contabilizador"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvLagartijasAbdominalesContabilizador"
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
+            android:text="Lagartijas / Abdominales:"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTotalLagartijasContabilizador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnReiniciarLagartijasContabilizador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ReiniciarLagartijas"
+            android:text="Reiniciar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSentadillasContabilizador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sentadillas:"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTotalSentadillasContabilizador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnReiniciarSentadillasContabilizador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ReiniciarSentadillas"
+            android:text="Reiniciar" />
+    </LinearLayout>
+</LinearLayout>

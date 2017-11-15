@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.GestionarRutinasActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvTituloGestionarRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GESTIONAR RUTINAS"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05" />
+
+    <TextView
+        android:id="@+id/tvTipoRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Rutina:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spTipoRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvListadoRutinasPredeterminadasGestionarRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rutinas Predeterminadas:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spListadoRutinasPredeterminadasGestionarRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvNombreRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtNombreRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvDescripcionRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtDescripcionGestionarRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.19"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnBuscarRutinaGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Buscar"
+        android:text="Buscar" />
+
+    <Button
+        android:id="@+id/btnGuardarGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Guardar"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/btnModificarGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Modificar"
+        android:text="Modificar" />
+
+    <Button
+        android:id="@+id/btnEliminarGestionarRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Eliminar"
+        android:text="Eliminar" />
+</LinearLayout>
