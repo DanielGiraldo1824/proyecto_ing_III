@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="uploadservice-2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/dfd6aca7a300edd427fd06ef3d8ee53473b08a13/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/dfd6aca7a300edd427fd06ef3d8ee53473b08a13/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
