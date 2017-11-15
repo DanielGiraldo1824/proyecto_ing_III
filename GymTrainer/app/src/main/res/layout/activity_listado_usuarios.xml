@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.AdminActivities.ListadoUsuariosActivity">
+
+    <TextView
+        android:id="@+id/tvListadoUsuariosRegistrados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuarios Registrados"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/lvListadoUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="407dp" />
+
+    <Button
+        android:id="@+id/btnCerrarSesionListadoUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CerrarSesion"
+        android:text="Cerrar Sesion" />
+</LinearLayout>

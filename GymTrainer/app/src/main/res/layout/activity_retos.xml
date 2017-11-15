@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.RetosActivity"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvTituloRetos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retos"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="31dp" />
+
+            <TextView
+                android:id="@+id/tvMensajeRetos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agite el dispositivo para seleccionar un reto."
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <TextView
+                android:id="@+id/tvNombreRetos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="37dp" />
+
+            <TextView
+                android:id="@+id/tvDescripcionRetos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.06"
+                android:text="Descripcion:"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ivRetoSeleccionada"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/gallery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_weight="6.79"
+                android:contentDescription="Seleccionada" />
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="48.33"
+                android:background="@android:color/darker_gray"
+                android:paddingTop="4dp"
+                android:spacing="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

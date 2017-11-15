@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.RutinasActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvMisRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mis Rutinas"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05" />
+
+    <TextView
+        android:id="@+id/tvAsignadasRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asignadas por el Instructor:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <ListView
+        android:id="@+id/lvListadoRutinasAsignadasRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="157dp" />
+
+    <TextView
+        android:id="@+id/tvPersonalizadasRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rutinas Personalizadas:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <ListView
+        android:id="@+id/lvRutinasPersonalizadasRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="190dp" />
+
+    <Button
+        android:id="@+id/btnGestionarRutinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="GestionarRutinas"
+        android:text="Gestionar" />
+</LinearLayout>

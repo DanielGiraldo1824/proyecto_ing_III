@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.ReproductorActivity">
+
+    <TextView
+        android:id="@+id/tvTituloReproductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reproductor"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/lvListadoCanciones"
+        android:layout_width="match_parent"
+        android:layout_height="392dp" />
+
+    <Button
+        android:id="@+id/btnPausarReproductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="PausarReproductor"
+        android:text="Pausar" />
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.jorge.gymtrainer.Activities.AdminActivities.RegistroMensualidadActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvRegistroGym"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registro Mensualidad"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:id="@+id/tvFechaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Registro:"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/txtFechaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/tvGrasaCorporalRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grasa Corporal:"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/txtGrasaCorporalRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvRitmoCardiacoRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ritmo Cardiaco:"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/txtRitmoCardiacoRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvPesoRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso:"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/txtPesoRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvAlturaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altura:"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/txtAlturaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvRutinaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rutina:"
+                android:textColor="@android:color/background_dark" />
+
+            <Spinner
+                android:id="@+id/spRutinaRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAlimentacionRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alimentación:"
+                android:textColor="@android:color/background_dark" />
+
+            <Spinner
+                android:id="@+id/spAlimentacionRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnRegistrarMedidasRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Registrar"
+                android:text="Registrar" />
+
+            <Button
+                android:id="@+id/btnAtrasRegistroMensualidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Atras"
+                android:text="Atras" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

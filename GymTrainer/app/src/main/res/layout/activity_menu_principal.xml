@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jorge.gymtrainer.Activities.UserActivities.MenuPrincipalActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menú Principal"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.26" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnContabilizadorMenuPrincipal"
+            android:layout_width="129dp"
+            android:layout_height="match_parent"
+            android:onClick="Contabilizador"
+            android:text="Contador" />
+
+        <Button
+            android:id="@+id/btnRutinasMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Rutinas"
+            android:text="Rutinas" />
+
+        <Button
+            android:id="@+id/btnMedidasMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Medidas"
+            android:text="Medidas" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnNoticiasMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2.74"
+            android:onClick="Noticias"
+            android:text="Noticias" />
+
+        <Button
+            android:id="@+id/btnAlimentacionMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="Alimentacion"
+            android:text="Alimentacion" />
+
+        <Button
+            android:id="@+id/btnGimnasiosMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Gimnasios"
+            android:text="Gimnasios" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRetosMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="9.25"
+            android:onClick="Retos"
+            android:text="Retos" />
+
+        <Button
+            android:id="@+id/btnCronometroMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Cronometro"
+            android:text="Cronometro" />
+
+        <Button
+            android:id="@+id/btnReproductorMenuPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Reproductor"
+            android:text="Reproductor" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCerrarSesionMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:onClick="CerrarSesionMenu"
+        android:text="Cerrar Sesion" />
+</LinearLayout>
